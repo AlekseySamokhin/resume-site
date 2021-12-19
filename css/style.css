@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Цвета */
+  --color-main: #23238d;
+  --color-btn-hover: #0c4c81;
+  --color-hr: gray;
+  --color-hr-gradient: #c9d6dd00;
+  --color-link-a: #fff;
+  --color-bc-fixed: #fff;
+  /* Тень блока */
+  --box-shadow-block-top: 0px -7px 21px -9px #000000;
+  /* Отступ между блоками */
+  --resume-section-ml: 5px;
+}
+
+/* Базовые стили */
+
+body {
+  background-color: #0b1d26;
+  background-image: url("./../img/bg/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link-a);
+}
+
+/* Конец базовых стилей */
+
+/* Основные стили */
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.container-small {
+  padding: 0 35px;
+}
+
+.section {
+  flex-basis: 450px;
+  height: 600px;
+  background-color: #fff;
+  margin-left: var(--resume-section-ml);
+  box-shadow: var(--box-shadow-block-top);
+}
+
+.section-scroll {
+  overflow-y: scroll;
+}
+
+/* Основные стили */
+
+/* Меню */
+
+.nav {
+  flex-basis: 130px;
+}
+
+.nav__list {
+  list-style-type: none;
+}
+
+.nav__item {
+  background-color: var(--color-main);
+  margin-bottom: 10px;
+}
+
+.nav__item:last-child {
+  margin-bottom: 0;
+}
+
+.nav__link {
+  display: block;
+  color: var(--color-link-a);
+  padding: 5px 0 5px 10px;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  background-color: var(--color-btn-hover);
+}
+/* Конец меню */
+
+/* Cекция RESUME */
+.section__resume-avatar {
+  display: block;
+  margin: 20px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid var(--color-main);
+}
+
+.section__resume-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.section__resume-title span {
+  color: var(--color-main);
+}
+
+.section__resume-subtitle {
+  text-align: center;
+}
+
+.section__resume-subtitle span {
+  color: var(--color-main);
+  font-style: italic;
+}
+
+.section__resume-line {
+  height: 1px;
+  border: 0;
+  margin: 15px 0;
+  background: linear-gradient(
+    to right,
+    var(--color-hr-gradient),
+    var(--color-hr),
+    var(--color-hr-gradient)
+  );
+}
+
+.section__resume-list {
+  text-align: center;
+  list-style-type: none;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.section__resume-contacts {
+  color: var(--color-link-a);
+  background-color: var(--color-main);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.section__resume-contacts a {
+  display: inline-block;
+  font-size: 13px;
+  padding: 15px 0;
+  height: 100%;
+}
+
+.section__resume-contacts a:hover {
+  text-decoration: underline;
+}
+
+.section__resume-socials {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.section__resume-socials img {
+  width: 43px;
+  height: 43px;
+}
+
+.section__resume-link {
+  display: block;
+  margin-right: 10px;
+}
+
+.section__resume-link:last-child {
+  margin-right: 0;
+}
+
+/* Конец секции RESUME */
+
+/*Секция education */
+
+.section__education-title {
+  position: fixed;
+  z-index: 100;
+  width: 363px;
+  font-size: 20px;
+  top: 100px;
+  background-color: var(--color-bc-fixed);
+  padding: 15px 0 10px 0;
+  border-bottom: 2px gray solid;
+}
+
+.section__education-div {
+  margin-top: 60px;
+}
+
+.section__education-links {
+  display: flex;
+  justify-content: left;
+  text-align: center;
+  font-size: 12px;
+}
+
+.section__education-download {
+  display: flex;
+  flex-basis: 170px;
+  background-color: var(--color-btn-hover);
+}
+
+.section__education_item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--color-link-a);
+  width: 100%;
+  padding: 10px 0;
+}
+
+.section__education-download:hover {
+  background-color: var(--color-main);
+}
+
+.section__education-touch:hover {
+  background-color: var(--color-main);
+}
+
+.section__education_item::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(./../img/svg/download.svg);
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  left: 10px;
+  top: 4px;
+}
+
+.section__education-touch {
+  display: flex;
+  flex-basis: 120px;
+  margin-left: 5px;
+  background-color: var(--color-btn-hover);
+}
+
+.section__education-subtitle {
+  position: relative;
+  color: var(--color-main);
+  border-left: 4px solid var(--color-main);
+  margin: 20px 0;
+  height: 40px;
+}
+
+.section__education-subtitle h3 {
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.section__education-subtitle::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(./../img/svg/education.svg);
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  left: 5px;
+}
+
+.section__education-text {
+  border-style: double;
+  border-color: gray;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+.section__education-text h2 {
+  margin-top: 10px;
+}
+
+.section__education-text h5 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 10px;
+  font-style: italic;
+  position: relative;
+}
+
+.section__education-text h5::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 1px;
+  width: 100%;
+  top: 20px;
+  background: gray; /* цвет линии */
+}
+
+.section__education-text p {
+  margin-bottom: 10px;
+  color: var(--color-hr);
+  font-size: 12px;
+  text-align: justify;
+}
+
+/* Конец секции education */
