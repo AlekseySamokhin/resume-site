@@ -1,114 +1,234 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>Site resume</title>
-</head>
-<body>
-  <!-- КОНТЕЙНЕР -->
-  <div class="container">
-    <!-- МЕНЮ -->
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
-        <li class="nav__item"><a class="nav__link" href="index.html">Resume</a></li>
-        <li class="nav__item"><a class="nav__link" href="index.html">Skills</a></li>
-        <li class="nav__item"><a class="nav__link" href="index.html">Portfolio<a><li>
-        <li class="nav__item"><a class="nav__link" href="index.html">Blog</a></li>
-        <li class="nav__item"><a class="nav__link" href="index.html">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- КОНЕЦ МЕНЮ -->
-    <!-- CЕКЦИЯ RESUME -->
-    <div class="section">
-      <div class="container-small">
-        <img class="section__resume-avatar" src="./img/photo/avatar.jpg" alt="Аватар" />
-        <h1 class="section__resume-title">Всем привет! <br> Меня зовут <span>Алексей Самохин!</span></h1>
-        <h4 class="section__resume-subtitle"> Место нахождения: <span>Россия, город Таганрог</span>.</h4>
-        <hr class="section__resume-line">
-        <ul class="section__resume-list">
-          <li>Участник курса по вэб программированию.</li>
-          <li>Изучаю HTML, СSS, JavaScript.</li>
-          <li>Хочу поменять сферу деятельности.</li>
-          <li>Очень надеюсь, что из этого что-то да выйдет :)))</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>My resume site!</title>
+  </head>
+  <body>
+    <!-- Flex container -->
+    <div class="flex-container">
+
+      <!-- Nav -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#home">Home</i></a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#resume">Resume</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#skills">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#blog">Blog</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contact">Contact</a>
+          </li>
         </ul>
-        <div class="section__resume-contacts">
-          <a href="mailto:lel.dude01@gmail.com">email: lel.dude01@gmail.com</a> /
-          <a href="tel:+79281030004">phone: +7 928 103 00 04</a>
+      </nav>
+      <!-- END Nav -->
+
+
+
+
+
+      <div class="flex-container">
+        <div class="main main--margin">
+
+            <img class="avatar" src="/img/avatar.jpg" alt="big avatar" />
+
+            <div class="main__text">
+              <p class="main__title">
+                Hello, I'am
+                <span class="main__title--blue">
+                  Aleksey Samokhin!
+                </span>
+              </p>
+              <p class="main__subtitle">
+                Junior web developer!
+              </p>
+            </div>
+
+            <hr class="main__line" />
+            <p class="main__description">
+              I am studying web programming. Practicing technologies such as
+              HTML, CSS, JS. I live in Taganrog. Sometimes works as a
+              freelancer. I'm an enthusiastic and detail-oriented Frontend
+              Software Engineer seeking an entry-level position with Company to
+              use my skills in coding, troubleshooting complex problems, and
+              assisting in the timely completion of projects. I am studying web
+              programming. Practicing technologies such as HTML, CSS, JS. I live
+              in Taganrog. Sometimes works as a freelancer. I'm an enthusiastic
+              and detail-oriented Frontend Software Engineer seeking an
+              entry-level position with Company to use my skills in coding,
+              troubleshooting complex problems, and assisting in the timely
+              completion of projects. I am studying web programming. Practicing
+              technologies such as HTML, CSS, JS. I live in Taganrog. Sometimes
+              works as a freelancer. I'm an enthusiastic and detail-oriented
+              Frontend Software Engineer seeking an entry-level position with
+              Company to use my skills in coding, troubleshooting complex
+              problems, and assisting in the timely completion of projects. I am
+              studying web programming. Practicing technologies such as HTML,
+              CSS, JS. I live in Taganrog. Sometimes works as a freelancer. I'm
+              an enthusiastic and detail-oriented Frontend Software Engineer
+              seeking an entry-level position with Company to use my skills in
+              coding, troubleshooting complex problems, and assisting in the
+              timely completion of projects.
+            </p>
+
+            <div class="contacts contacts--margin">
+              <a class="contacts__link email" href="mailto:lel.dude01@gmail.com">
+                email: lel.dude01@gmail.com
+              </a>
+              <span class="contacts__slash">
+               |
+              </span>
+              <a class="contacts__link phone" href="tel:+12344567890">
+                phone: +1 234 456 7890
+              </a>
+            </div>
+
+            <div class="socials">
+              <a class="socials__link" href="https://github.com/AlekseySamokhin">
+                <img class="socials__icon" src="img/icons/github.png" alt="github" />
+              </a>
+              <a class="socials__link" href="https://t.me/dudenmbone">
+                <img class="socials__icon" src="img/icons/telegram.png" alt="telegramm" />
+              </a>
+              <a class="socials__link" href="https://vk.com/">
+                <img class="socials__icon" src="img/icons/vk.png" alt="vkontakte" />
+              </a>
+              <a class="socials__link" href="https://facebook.com">
+                <img class="socials__icon" src="img/icons/facebook.png" alt="facebook" />
+              </a>
+              <a class="socials__link" href="https://www.instagram.com/">
+                <img class="socials__icon" src="img/icons/istagram.png" alt="instagram" />
+              </a>
+              <a class="socials__link" href="https://www.skype.com/">
+                <img class="socials__icon" src="img/icons/skype.png" alt="skype" />
+              </a>
+            </div>
+
+            <div style="height: 20px"></div>
+
+          </div>
+
+
+
+        <div class="main main--margin">
+
+            <div id="resume" class="main__resume">
+
+              <h1 class="title-headline">Resume</h1>
+
+              <div class="btn-wrapper">
+                <button class="btn">Download resume</button>
+                <button class="btn">Get in touch</button>
+              </div>
+
+              <div class="head-icon-wrapper">
+                <h2 class="head-icon education">Education</h2>
+              </div>
+
+              <div class="main__headlines-resume_text">
+                <h2>Study</h2>
+                <h5>Southern Federal Unevrsity 2011-2017</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ratione, pariatur quas saepe commodi quisquam eligendi nemo
+                  placeat nobis optio, error magnam beatae excepturi recusandae
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+                  odio, quisquam voluptatem optio eos
+                </p>
+              </div>
+              <div class="main__headlines-resume_text">
+                <h2>Work</h2>
+                <h5>TerraDocsInvest company 2020-2022</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ratione, pariatur quas saepe commodi quisquam eligendi nemo
+                  placeat nobis optio, error magnam beatae excepturi recusandae
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptates, pariatur necessitatibus. Voluptas magnam illo ut
+                  quod accusantium commodi architecto deserunt accusamus
+                  adipisci, rem quas atque
+                </p>
+              </div>
+              <div class="main__headlines-resume_text">
+                <h2>Hobbies</h2>
+                <h5>Bicycle, Footbal</h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ratione, pariatur quas saepe commodi quisquam eligendi nemo
+                  placeat nobis optio, error magnam beatae excepturi recusandae
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eveniet
+                </p>
+              </div>
+            </div>
+            <div id="skills" class="main__headlines-skills">
+              <h1 class="title-headline">Skills</h1>
+              <div class="head-incon-wrapper">
+                <h2 class="head-icon tech-stack">Tech Stack:</h>
+              </div>
+
+
+              <div class="angular">
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-html5" style="color: white"></i></span><span class="span-text">html</span></div>
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-react" style="color: white"></i></span><span class="span-text">react</span></div>
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-js" style="color: white"></i></span><span class="span-text">js</span></div>
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-node-js" style="color: white"></i></span><span class="span-text">node.JS</span></div>
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-css3-alt" style="color: white"></i></span><span class="span-text">css</span></div>
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-vuejs" style="color: white"></i></span><span class="span-text">vue.js</span></div>
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-sass" style="color: white"></i></span><span class="span-text">sass</span></div>
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-less" style="color: white"></i></span><span class="span-text">less</span></div>
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-bootstrap" style="color: white"></i></span><span class="span-text">bootstrap</span></div>
+                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-php" style="color: white"></i></span><span class="span-text">php</span></div>
+              <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-angular" style="color: white"></i></span><span class="span-text">angular</span></div>
+
+            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-git-alt" style="color: white"></i></span><span class="span-text">git</span></div>
+            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-github-alt" style="color: white"></i></span><span class="span-text">github</span></div>
+            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-gitkraken" style="color: white"></i></span><span class="span-text">gitkraken</span></div>
+            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-figma" style="color: white"></i></span><span class="span-text">figma</span></div>
+            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-sourcetree" style="color: white"></i></span><span class="span-text">soursetree</span></div>
+             </div>
+          </div>
         </div>
-        <div class="section__resume-socials">
-          <a class="section__resume-link" href="https://github.com/AlekseySamokhin"><img src="img/icons/github.png" alt="github" /></a>
-          <a class="section__resume-link" href="https://t.me/dudenmbone"><img src="img/icons/telegram.png" alt="telegramm" /></a>
-          <a class="section__resume-link" href="https://vk.com/dudeone"><img src="img/icons/vk.png" alt="vkontakte" /></a>
-          <a class="section__resume-link" href="https://facebook.com"><img src="img/icons/facebook.png" alt="facebook" /></a>
-          <a class="section__resume-link" href="https://www.instagram.com/aleksey_samokhin"><img src="img/icons/istagramm.png" alt="instagramm" /></a>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
-    <!-- КОНЕЦ СЕКЦИИ RESUME -->
-    <!-- CЕКЦИЯ EDUCATION -->
-    <div class="section section-scroll">
-      <div class="container-small">
-        <div class="section__education-title">RESUME</div>
-        <!-- тут надо что то сделать -->
-        <div class="section__education-div">
-          <div class="section__education-links">
-            <div class="section__education-download">
-              <a class="section__education_item" href="index.html">Download in resume</a>
-            </div>
-            <div class="section__education-touch">
-              <a class="section__education_item" href="index.html">Get in touch</a>
-            </div>
-          </div>
-          <div class="section__education-subtitle">
-            <h3>Education</h3>
-          </div>
-          <div class="section__education-text">
-            <h2>Graphic Design</h2>
-            <h5>St. Patrick Unevrsity (2 Years Course) - Graduation May 2013</h5>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Ratione, pariatur quas saepe commodi quisquam eligendi nemo
-              placeat nobis optio, error magnam beatae excepturi recusandae Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Quod odio, quisquam voluptatem optio eos alias quaerat culpa impedit eveniet nemo
-              accusantium ut officia provident, a assumenda voluptate deserunt? Repellendus quae quod ipsam eos, qui
-              laudantium. Nam placeat blanditiis accusamus atque, maiores fugit omnis sint odit provident quam culpa
-              veritatis labore?
-            </p>
-          </div>
-          <div class="section__education-text">
-            <h2>Graphic Design</h2>
-            <h5>St. Patrick Unevrsity (2 Years Course) - Graduation May 2013</h5>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Ratione, pariatur quas saepe commodi quisquam eligendi nemo
-              placeat nobis optio, error magnam beatae excepturi recusandae Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit. Voluptates, pariatur necessitatibus. Voluptas magnam illo ut quod accusantium commodi
-              architecto deserunt accusamus adipisci, rem quas atque consequuntur aut debitis exercitationem corrupti?
-              Fugiat, laboriosam culpa cumque architecto facere voluptatem, optio in eius nam recusandae molestias
-              beatae ad similique, iusto ea? Cumque, neque.
-            </p>
-          </div>
-        </div>
-        <div class="section__education-text">
-          <h2>Graphic Design</h2>
-          <h5>St. Patrick Unevrsity (2 Years Course) - Graduation May 2013</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Ratione, pariatur quas saepe commodi quisquam eligendi nemo
-            placeat nobis optio, error magnam beatae excepturi recusandae Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Eveniet aliquam eum velit odit deleniti assumenda doloremque dicta fuga corporis! Repellat
-            corporis, sed iste nam ipsam deleniti iure accusantium tempore fuga error et? Quidem ducimus voluptatibus
-            enim nesciunt aperiam nam blanditiis non soluta repellat architecto magni eum sit quos, libero dolorem!
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- CЕКЦИЯ EDUCATION -->
-  </div>
-  <!-- КОНЕЦ КОНТЕЙНЕРа -->
-</body>
+    <!-- End Flex Container -->
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/3bc0968486.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+    <script src="anchor.js"></script>
+    <!-- End Scripts -->
+  </body>
 </html>
