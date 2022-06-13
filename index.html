@@ -9,18 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-    <title>My resume site!</title>
+    <title>My resume site</title>
   </head>
+
   <body>
     <!-- Flex container -->
     <div class="flex-container">
 
       <!-- Nav -->
       <nav class="nav">
-        <ul class="nav__list">
+        <ul id="nav" class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#home">Home</i></a>
+            <a class="nav__link active" href="#home">Home</i></a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#resume">Resume</a>
@@ -46,7 +46,8 @@
 
 
       <div class="flex-container">
-        <div class="main main--margin">
+        <div class="main-wrapper">
+        <div class="main">
 
             <img class="avatar" src="/img/avatar.jpg" alt="big avatar" />
 
@@ -89,6 +90,7 @@
               timely completion of projects.
             </p>
 
+            <!-- Сontacts -->
             <div class="contacts contacts--margin">
               <a class="contacts__link email" href="mailto:lel.dude01@gmail.com">
                 email: lel.dude01@gmail.com
@@ -100,39 +102,73 @@
                 phone: +1 234 456 7890
               </a>
             </div>
+            <!-- End Сontacts -->
 
+            <!-- Socials -->
+            <div class="socials-wrapper">
             <div class="socials">
               <a class="socials__link" href="https://github.com/AlekseySamokhin">
-                <img class="socials__icon" src="img/icons/github.png" alt="github" />
+                <i class="socials__icon fa-brands fa-github"></i>
               </a>
               <a class="socials__link" href="https://t.me/dudenmbone">
-                <img class="socials__icon" src="img/icons/telegram.png" alt="telegramm" />
+                <i class="socials__icon fa-brands fa-telegram"></i>
               </a>
-              <a class="socials__link" href="https://vk.com/">
-                <img class="socials__icon" src="img/icons/vk.png" alt="vkontakte" />
-              </a>
+
               <a class="socials__link" href="https://facebook.com">
-                <img class="socials__icon" src="img/icons/facebook.png" alt="facebook" />
+                <i class="socials__icon fa-brands fa-facebook"></i>
               </a>
-              <a class="socials__link" href="https://www.instagram.com/">
-                <img class="socials__icon" src="img/icons/istagram.png" alt="instagram" />
+              <a class="socials__link" href="https://www.instagram.com">
+                <i class="socials__icon fa-brands fa-instagram-square"></i>
               </a>
+
+              <a class="socials__link" href="https://www.linkedin.com">
+                <i class="socials__icon fa-brands fa-linkedin"></i>
+              </a>
+
               <a class="socials__link" href="https://www.skype.com/">
-                <img class="socials__icon" src="img/icons/skype.png" alt="skype" />
+                <i class="socials__icon fa-brands fa-skype"></i>
+              </a>
+
+              <a class="socials__link" href="https://www.skype.com/">
+                <i class="socials__icon fa-brands fa-vk"></i>
+              </a>
+
+              <a class="socials__link" href="https://www.slack.com/">
+                <i class="socials__icon fa-brands fa-slack"></i>
               </a>
             </div>
-
-            <div style="height: 20px"></div>
-
           </div>
+            <!-- End Socials -->
+          </div>
+        </div>
 
 
+        <div class="main-wrapper">
+        <div class="main">
 
-        <div class="main main--margin">
+            <div id="home" class="main__home scroll-margin-top">
 
-            <div id="resume" class="main__resume">
+              <div class="title-headline-wrapper">
+                <h1 class="title-headline">Home</h1>
+              </div>
 
-              <h1 class="title-headline">Resume</h1>
+              <div class="head-icon-wrapper">
+                <h2 class="head-icon image">Image</h2>
+              </div>
+
+              <div class="home-wrapper">
+              <div class="home__image">
+                <img class="image-landscape" src="./img/programming.jpeg" alt="home image programming">
+                <h2 class="home__title"><span class="home__text">I'm study programming!</span></h2>
+              </div>
+              </div>
+            </div>
+
+            <div id="resume" class="main__resume scroll-margin-top">
+
+              <div class="title-headline-wrapper">
+                <h1 class="title-headline">Resume</h1>
+              </div>
 
               <div class="btn-wrapper">
                 <button class="btn">Download resume</button>
@@ -140,13 +176,14 @@
               </div>
 
               <div class="head-icon-wrapper">
-                <h2 class="head-icon education">Education</h2>
+                <h2 class="head-icon resume">Life</h2>
               </div>
 
-              <div class="main__headlines-resume_text">
-                <h2>Study</h2>
-                <h5>Southern Federal Unevrsity 2011-2017</h5>
-                <p>
+              <div class="career-wrapper">
+              <div class="career-text">
+                <h3 class="career-text__title study">Study</h3>
+                <h4 class="career-text__subtitle">Southern Federal Unevrsity 2011-2017</h4>
+                <p class="career-text__description">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Ratione, pariatur quas saepe commodi quisquam eligendi nemo
                   placeat nobis optio, error magnam beatae excepturi recusandae
@@ -154,81 +191,143 @@
                   odio, quisquam voluptatem optio eos
                 </p>
               </div>
-              <div class="main__headlines-resume_text">
-                <h2>Work</h2>
-                <h5>TerraDocsInvest company 2020-2022</h5>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Ratione, pariatur quas saepe commodi quisquam eligendi nemo
-                  placeat nobis optio, error magnam beatae excepturi recusandae
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptates, pariatur necessitatibus. Voluptas magnam illo ut
-                  quod accusantium commodi architecto deserunt accusamus
-                  adipisci, rem quas atque
-                </p>
               </div>
-              <div class="main__headlines-resume_text">
-                <h2>Hobbies</h2>
-                <h5>Bicycle, Footbal</h5>
-                <p>
+
+              <div class="career-wrapper">
+              <div class="career-text">
+                <h3 class="career-text__title army">Army</h3>
+                <h4 class="career-text__subtitle">Russians Army 2017-2018</h4>
+                <p class="career-text__description">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Ratione, pariatur quas saepe commodi quisquam eligendi nemo
                   placeat nobis optio, error magnam beatae excepturi recusandae
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eveniet
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+                  odio, quisquam voluptatem optio eos
                 </p>
               </div>
             </div>
-            <div id="skills" class="main__headlines-skills">
-              <h1 class="title-headline">Skills</h1>
-              <div class="head-incon-wrapper">
+
+            <div class="career-wrapper">
+              <div class="career-text">
+                <h3 class="career-text__title work">Work</h3>
+                <h4 class="career-text__subtitle">Cadastr company 2015-2017</h4>
+                <p class="career-text__description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ratione, pariatur quas saepe commodi quisquam eligendi nemo
+                  placeat nobis optio, error magnam beatae excepturi recusandae
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+                  odio, quisquam voluptatem optio eos
+                </p>
+                <h4 class="career-text__subtitle">TerraDocsInvest company 2020-2022</h4>
+                <p class="career-text__description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Ratione, pariatur quas saepe commodi quisquam eligendi nemo
+                  placeat nobis optio, error magnam beatae excepturi recusandae
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+                  odio, quisquam voluptatem optio eos
+                </p>
+              </div>
+              </div>
+
+              <div class="career-wrapper">
+                <div class="career-text">
+                    <h3 class="career-text__title hobbies">Hobbies</h3>
+                    <h4 class="career-text__subtitle">Bicycle, Footbal</h4>
+                    <p class="career-text__description">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Ratione, pariatur quas saepe commodi quisquam eligendi nemo
+                      placeat nobis optio, error magnam beatae excepturi recusandae
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+                      odio, quisquam voluptatem optio eos
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="skills" class="main__skills scroll-margin-top">
+
+              <div class="title-headline-wrapper">
+                <h1 class="title-headline">Skills</h1>
+              </div>
+
+              <div class="head-icon-wrapper">
                 <h2 class="head-icon tech-stack">Tech Stack:</h>
               </div>
 
+              <div class="skills__wrapper">
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-react" style="color: white"></i></span><span class="skill__name">react</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-html5" style="color: white"></i></span><span class="skill__name">html</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-js" style="color: white"></i></span><span class="skill__name">javascript</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-node-js" style="color: white"></i></span><span class="skill__name">node.js</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-css3-alt" style="color: white"></i></span><span class="skill__name">css</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-vuejs" style="color: white"></i></span><span class="skill__name">vue.js</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-sass" style="color: white"></i></span><span class="skill__name">sass</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-less" style="color: white"></i></span><span class="skill__name">less</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-bootstrap" style="color: white"></i></span><span class="skill__name">bootstrap</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-php" style="color: white"></i></span><span class="skill__name">php</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-angular" style="color: white"></i></span><span class="skill__name">angular</span></div>
+              </div>
 
-              <div class="angular">
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-html5" style="color: white"></i></span><span class="span-text">html</span></div>
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-react" style="color: white"></i></span><span class="span-text">react</span></div>
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-js" style="color: white"></i></span><span class="span-text">js</span></div>
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-node-js" style="color: white"></i></span><span class="span-text">node.JS</span></div>
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-css3-alt" style="color: white"></i></span><span class="span-text">css</span></div>
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-vuejs" style="color: white"></i></span><span class="span-text">vue.js</span></div>
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-sass" style="color: white"></i></span><span class="span-text">sass</span></div>
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-less" style="color: white"></i></span><span class="span-text">less</span></div>
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-bootstrap" style="color: white"></i></span><span class="span-text">bootstrap</span></div>
-                <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-php" style="color: white"></i></span><span class="span-text">php</span></div>
-              <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-angular" style="color: white"></i></span><span class="span-text">angular</span></div>
 
-            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-git-alt" style="color: white"></i></span><span class="span-text">git</span></div>
-            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-github-alt" style="color: white"></i></span><span class="span-text">github</span></div>
-            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-gitkraken" style="color: white"></i></span><span class="span-text">gitkraken</span></div>
-            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-figma" style="color: white"></i></span><span class="span-text">figma</span></div>
-            <div class="skills-angular"><span class="angular-span"><i class="fa-brands fa-sourcetree" style="color: white"></i></span><span class="span-text">soursetree</span></div>
-             </div>
+
+              <div class="head-icon-wrapper">
+                <h2 class="head-icon tools">Tools:</h>
+              </div>
+
+
+              <div class="skills__wrapper">
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-git-alt" style="color: white"></i></span><span class="skill__name">git</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-github-alt" style="color: white"></i></span><span class="skill__name">github</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-gitkraken" style="color: white"></i></span><span class="skill__name">gitkraken</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-figma" style="color: white"></i></span><span class="skill__name">figma</span></div>
+                <div class="skill"><span class="skill__icon"><i class="fa-brands fa-sourcetree" style="color: white"></i></span><span class="skill__name">soursetree</span></div>
+              </div>
+
+            </div>
+
+            <div id="potfolio" class="main__portfolio scroll-margin-top">
+
+              <div class="title-headline-wrapper">
+                <h1 class="title-headline">Portfolio</h1>
+              </div>
+
+            <div class="portfolio-wrapper">
+              <div class="portfolio-content">
+                <img class="portfolio-content__image" src="/img/portfolio/popugay.jpeg" alt="example site">
+                <div class="portfolio-block">
+                    <p class="portfolio-block__title">portfolio</p>
+                    <p class="portfolio-block__date">2022</p>
+                </div>
+              </div>
+            </div>
+
+            </div>
+
+
           </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
     <!-- End Flex Container -->
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/3bc0968486.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
-    <script src="anchor.js"></script>
+    <script src="main.js"></script>
     <!-- End Scripts -->
   </body>
 </html>
