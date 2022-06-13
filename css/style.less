@@ -1,8 +1,10 @@
+@import url("style.less");
+
 // colors
 @background-color: #3ca8c3;
 @main-color: #23238d;
 @hover-color: #3889cb;
-@active-color: #4caaf7;
+@active-color: #359df2;
 @link-color: #ffffff;
 
 // margin
@@ -15,10 +17,6 @@
 
 // font-family
 @font-family: "Roboto", sans-serif;
-
-.active {
-  background-color: @active-color;
-}
 
 * {
   padding: 0;
@@ -33,7 +31,7 @@ html {
 body {
   font-family: @font-family;
   background-color: @background-color;
-  background-image: url("./../img/bg/background-main.jpg");
+  background-image: url("./../img/backgrounds/background-main.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -52,17 +50,16 @@ a {
   justify-content: center;
 }
 
-.scroll-margin-top {
+.scroll-top {
   scroll-margin-top: @scroll-margin-top;
 }
 
+// Nav
 .nav {
   width: 150px;
   font-size: 1.6rem;
 
   &__list {
-    padding: 0;
-    margin: 0;
     list-style-type: none;
   }
 
@@ -76,6 +73,9 @@ a {
     padding: 10px 0 10px 20px;
     text-transform: uppercase;
     transition: all 0.5s ease;
+    &--active {
+      background-color: @active-color;
+    }
 
     &:hover {
       background-color: @hover-color;
@@ -98,35 +98,27 @@ a {
 
 .main {
   position: relative;
-  overflow: hidden;
   overflow-y: scroll;
   overflow-x: hidden;
-  scroll-margin-top: 40px;
-  box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0px -7px 21px -9px #000000;
   height: 600px;
   padding: 40px 35px 0 35px;
   max-width: 500px;
-  min-width: 350px;
-  z-index: 1;
+  z-index: 100;
 
   &::before {
     position: absolute;
     display: block;
     content: "";
-    background: url("../img/bg/background-section.png");
+    background: url("../img/backgrounds/background-section.png");
     background-repeat: repeat;
     opacity: 0.5;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: -1;
-  }
-
-  &--margin {
-    margin-left: 10px;
+    z-index: -100;
   }
 
   &__text {
@@ -147,7 +139,7 @@ a {
     margin: 0;
     font-size: 1.6rem;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
     font-weight: bold;
   }
 
@@ -169,7 +161,7 @@ a {
 
     &-resume {
       &-skills {
-        margin-top: 2rem;
+        margin-top: 20rem;
 
         &_stack {
           &_title {
@@ -253,10 +245,6 @@ a {
       &.email::before {
         content: "\f1fa";
       }
-
-      //&:hover {
-      //  text-decoration: underline;
-      //}
     }
 
     &__slash {
@@ -313,21 +301,34 @@ a {
 
     &::before {
       position: absolute;
-      content: "";
-      background-image: url(./../img/svg/download.svg);
-      background-size: cover;
-      width: 20px;
-      height: 20px;
-      left: 15px;
-      top: 2px;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      top: 3;
+      left: 13px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 1.15rem;
     }
+
+    &.download::before {
+      content: "\f019";
+    }
+
+    &.message::before {
+      content: "\f0e0";
+    }
+
     &:hover {
       background: @hover-color;
     }
   }
   // Button
 
-  .title-headline-wrapper {
+  .main .title-headline-wrapper {
+    margin-top: 10px;
   }
 
   .title-headline {
@@ -356,36 +357,43 @@ a {
       font-variant: normal;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 2.25rem;
       top: 10;
       left: 20px;
     }
     &.resume::before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 2.25rem;
       content: "\f183";
     }
 
     &.tech-stack::before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 2.25rem;
       content: "\e4e5";
     }
 
     &.tools::before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 2.25rem;
       content: "\f7d9";
     }
 
     &.image::before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 2.25rem;
       content: "\f03e";
     }
+
+    &.portfolio::before {
+      content: "\f02d";
+    }
+
+    &.blog::before {
+      content: "\f183";
+    }
+
+    &.contact::before {
+      content: "\f2bb";
+    }
+  }
+
+  .skills-block-wrapper {
+    margin-bottom: 40px;
   }
 
   .skills__wrapper {
@@ -424,8 +432,13 @@ a {
   }
 }
 
-.career-wrapper {
+.career-block-wrapper {
   margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.career-wrapper {
+  margin-bottom: 10px;
 }
 
 .career-text {
@@ -496,6 +509,7 @@ a {
 // Portfolio
 .portfolio-wrapper {
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .portfolio-content {
@@ -529,11 +543,7 @@ a {
 // Home
 .home-wrapper {
   margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.scroll-margin-top {
-  scroll-margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .home__image {
@@ -561,3 +571,172 @@ a {
   width: 100%;
 }
 // End Home
+
+// Contact Form
+.form {
+  min-height: 500px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  &__input {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    border-color: @main-color;
+    position: relative;
+    &::placeholder {
+      font-size: 1.5rem;
+    }
+  }
+  &__textarea {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    border-width: 2px;
+    border-color: @main-color;
+    font-family: inherit;
+    font-size: inherit;
+    &::placeholder {
+      font-size: 1.5rem;
+    }
+  }
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 10px 30px;
+    max-width: 50%;
+    border-radius: 5px;
+    background-color: @main-color;
+    color: #fff;
+    border: none;
+    transition: 0.5s;
+    &:hover {
+      background-color: @hover-color;
+    }
+  }
+}
+
+// Blog
+
+.blog_page_wrapper {
+  margin: 20px 0;
+}
+
+.blog_items {
+  margin: 10px 0;
+}
+
+.blog__thumb {
+  position: relative;
+}
+
+.blog__img {
+  margin: 0 auto;
+  cursor: pointer;
+  display: block;
+  max-width: 75%;
+  height: auto;
+}
+
+.blog_overlay {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 75%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.78);
+  color: #000;
+  transform: scale3d(1.2, 1.2, 1.2);
+  -webkit-transform: scale3d(1.2, 1.2, 1.2);
+  -moz-transform: scale3d(1.2, 1.2, 1.2);
+  -ms-transform: scale3d(1.2, 1.2, 1.2);
+  -o-transform: scale3d(1.2, 1.2, 1.2);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.48, -0.05, 0.535, 1.37);
+  -moz-transition: all 0.3s cubic-bezier(0.48, -0.05, 0.535, 1.37);
+  -o-transition: all 0.3s cubic-bezier(0.48, -0.05, 0.535, 1.37);
+  transition: all 0.3s cubic-bezier(0.48, -0.05, 0.535, 1.37);
+}
+
+.blog_items:hover .blog_overlay {
+  transform: scale3d(0.9, 0.9, 0.9);
+  -webkit-transform: scale3d(0.9, 0.9, 0.9);
+  -moz-transform: scale3d(0.9, 0.9, 0.9);
+  -ms-transform: scale3d(0.9, 0.9, 0.9);
+  -o-transform: scale3d(0.9, 0.9, 0.9);
+  visibility: visible;
+  opacity: 1;
+}
+
+.blog_items:hover .read_m_link {
+  color: @hover-color !important;
+}
+
+.blog_items:hover .blog__desc h3 a {
+  color: @hover-color !important;
+}
+
+.blog_page_wrapper .blog_overlay .link_icon {
+  width: 38px;
+  height: 38px;
+  line-height: 35px;
+  color: #fff;
+  font-size: 18px;
+  border: 2px solid;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.blog__desc {
+  padding: 15px 50px;
+}
+
+.blog__desc h3 {
+  margin-bottom: 10px;
+}
+
+.blog__desc h3 a {
+  font-size: 1.5rem;
+  color: @main-color !important;
+}
+
+.blog__desc p {
+  height: auto;
+  font-size: 1.25rem;
+  line-height: 20px;
+  color: #333;
+}
+
+.blog__meta {
+  margin-bottom: 15px;
+}
+
+.blog__date {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.blog__date i {
+  padding-right: 7px;
+  color: @main-color;
+}
+
+.read_m_link {
+  display: inline-block;
+  color: @main-color !important;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 5px;
+  line-height: 19px;
+}
