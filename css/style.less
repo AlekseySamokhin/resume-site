@@ -84,7 +84,7 @@ a {
 }
 
 .mt-10 {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .mt-8 {
@@ -351,6 +351,7 @@ a {
     position: relative;
     & img {
       width: 100%;
+      border-radius: 5px;
     }
   }
 
@@ -593,6 +594,7 @@ a {
     border-color: @main-color;
     font-family: inherit;
     font-size: 1.3rem;
+    resize: none; /* ban change size */
     &::placeholder {
       font-size: 1.5rem;
     }
@@ -612,6 +614,53 @@ a {
     &:hover {
       background-color: @hover-color;
     }
+  }
+}
+
+.blog {
+  &__items {
+    cursor: pointer;
+  }
+  &__img {
+    margin: 0 auto;
+    cursor: pointer;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  &__items:hover &__link,
+  &__items:hover &__date span,
+  &__items:hover &__date i {
+    color: @hover-color;
+  }
+
+  &__items:hover &__img {
+    opacity: 0.75;
+  }
+
+  &__date {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    & span {
+      transition: 0.3s;
+    }
+
+    & i {
+      transition: 0.3s;
+      padding-right: 7px;
+      color: @main-color;
+    }
+  }
+
+  &__link {
+    transition: 0.3s;
+    color: @main-color;
+    font-size: 1.3rem;
+    font-weight: 500;
   }
 }
 
@@ -648,65 +697,4 @@ a {
   }
 }
 
-
-
 // Blog
-.blog_items {
-
-}
-
-.blog__thumb {
-  position: relative;
-}
-
-.blog__img {
-  margin: 0 auto;
-  cursor: pointer;
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.blog_items:hover .blog__link {
-  color: @hover-color !important;
-}
-
-.blog_items:hover .blog__desc h3 a {
-  color: @hover-color !important;
-}
-
-.blog__desc {
-  padding: 15px 0;
-}
-
-.blog__desc h3 {
-  margin-bottom: 10px;
-}
-
-.blog__desc h3 a {
-  font-size: 1.5rem;
-  color: @main-color !important;
-}
-
-.blog__meta {
-  margin-bottom: 15px;
-}
-
-.blog__date {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-
-.blog__date i {
-  padding-right: 7px;
-  color: @main-color;
-}
-
-.blog__link {
-  display: inline-block;
-  color: @main-color !important;
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 5px;
-  line-height: 19px;
-}
