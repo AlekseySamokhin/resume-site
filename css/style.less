@@ -5,9 +5,7 @@
 @active-color: #359df2;
 @link-color: #ffffff;
 
-// margin
 @scroll-margin-top: 40px;
-@margin-left-block: 15px;
 
 // font-size
 @font-size: 62.5%;
@@ -53,7 +51,6 @@ a {
   scroll-margin-top: @scroll-margin-top;
 }
 
-// Navigation
 .center {
   text-align: center;
 }
@@ -66,6 +63,12 @@ a {
   text-transform: uppercase;
 }
 
+.m-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// margin
 .ml-10 {
   margin-left: 10px;
 }
@@ -124,11 +127,6 @@ a {
 
 .mb-30 {
   margin-bottom: 30px;
-}
-
-.m-center {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .nav {
@@ -470,6 +468,7 @@ a {
   border-style: double;
   border-color: gray;
   padding: 15px 20px 20px 20px;
+  background-color: #ffffff;
 
   &__title {
     font-size: 1.75rem;
@@ -533,29 +532,39 @@ a {
 
 .main {
   box-sizing: border-box;
-  position: relative;
   overflow-y: scroll;
-  overflow-x: hidden;
   background-color: #ffffff;
   box-shadow: 0px -7px 21px -9px #000000;
   height: 565px;
   padding: 45px 30px 0 45px;
   max-width: 470px;
   z-index: 100;
+  //background-image: url("../img/backgrounds/background-section.png");
+  background-size: 300% 300%;
 
-  &::before {
-    position: absolute;
-    display: block;
-    content: "";
-    background: url("../img/backgrounds/background-section.png");
-    background-repeat: repeat;
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -100;
-  }
+  //&::before {
+  //  position: absolute;
+  //  display: block;
+  //  content: "";
+  //  //background: url("../img/backgrounds/background-section.png") repeat center
+  //  //  center fixed;
+  //  background-color: #ffffff;
+  //  background-size: 100% 100%;
+  //  -webkit-background-size: cover;
+  //  -moz-background-size: cover;
+  //  -o-background-size: cover;
+  //  background-size: cover;
+  //  opacity: 0.5;
+  //  top: 0;
+  //  left: 0;
+  //  bottom: 0;
+  //  right: 0;
+  //  z-index: -100;
+
+  //  &height::before {
+  //    height: 10000px;
+  //  }
+  //}
 }
 
 .form {
@@ -626,6 +635,7 @@ a {
 .blog {
   &__items {
     cursor: pointer;
+    background-color: #ffffff;
   }
   &__img {
     margin: 0 auto;
