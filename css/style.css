@@ -543,6 +543,7 @@ a {
   -webkit-box-shadow: 0px 0px 3px 5px rgba(26, 142, 231, 0.46);
   -moz-box-shadow: 0px 0px 3px 5px rgba(26, 142, 231, 0.46);
   box-shadow: 0px 0px 3px 5px rgba(26, 142, 231, 0.46);
+  transition: all 0.2s;
 }
 .portfolio__item a {
   cursor: pointer;
