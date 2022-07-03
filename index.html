@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
     <link rel="stylesheet/less" type="text/css" href="css/style.less" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -101,7 +102,7 @@
       <!-- Start Main -->
       <div class="main ml-10">
         <!-- Start Home -->
-        <div id="home" class="home scroll-top">
+        <div id="home" class="main__home scroll-top">
           <h2 class="title title--h2 uppercase mt-0">Home</h2>
 
           <hr class="line line--black" />
@@ -111,10 +112,12 @@
             Image
           </h3>
 
-          <div class="home__image">
+          <div class="main__image">
             <img src="./img/programming.jpeg" alt="I love programming" />
 
-            <h2 class="home__title">I'm study programming!</h2>
+            <h2 class="title title--h2 title--color_white title--image center">
+              I'm study programming!
+            </h2>
           </div>
         </div>
         <!-- End Home -->
@@ -137,7 +140,8 @@
 
           <h3 class="title title--h3 title--color_blue title--border_left">
             <i
-              class="title__icon title__icon--big fa-solid fa-building-columns"></i>
+              class="title__icon title__icon--big fa-solid fa-building-columns"
+            ></i>
             Education
           </h3>
 
@@ -145,7 +149,8 @@
             <h3 class="title title--h3 mt-0 mb-5">
               Study
               <i
-                class="title__icon title__icon--small fa-solid fa-graduation-cap"></i>
+                class="title__icon title__icon--small fa-solid fa-graduation-cap"
+              ></i>
             </h3>
 
             <h6 class="title title--regular title--italic title--h6 mt-10 mb-0">
@@ -172,7 +177,8 @@
             <h3 class="title title--h3 mt-0 mb-5">
               Russian Army
               <i
-                class="title__icon title__icon--small fa-solid fa-person-rifle"></i>
+                class="title__icon title__icon--small fa-solid fa-person-rifle"
+              ></i>
             </h3>
 
             <h6 class="title title--regular title--italic title--h6 mt-10 mb-0">
@@ -442,29 +448,29 @@
 
           <h3 class="title title--h3 title--color_blue title--border_left">
             <i
-              class="title__icon title__icon--big fa-solid fa-magnifying-glass"></i>
+              class="title__icon title__icon--big fa-solid fa-magnifying-glass"
+            ></i>
             Landing
           </h3>
 
           <div class="portfolio__item mb-10 m-center">
-            <a href="http://www.raddison.com/">
-              <span class="portfolio__elem">
-                <img
-                  class="portfolio__img"
-                  src="./img/portfolio/hotel.jpeg"
-                  alt="portfolio site" />
-              </span>
+            <img
+              class="portfolio__img"
+              src="./img/portfolio/hotel.jpeg"
+              alt="portfolio site"
+            />
 
-              <span class="portfolio__desc">
-                <span class="portfolio__title">Site about hotel.</span>
+            <div class="portfolio__desc">
+              <h4 class="title title--h4 title--color_blue center mt-0 mb-10">
+                Site about hotel
+              </h4>
 
-                <span class="portfolio__date">since 2022.</span>
+              <p class="portfolio__date">since 2022</p>
 
-                <span class="portfolio__text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </span>
-              </span>
-            </a>
+              <p class="paragraph paragraph--small center">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
           </div>
 
           <h2 class="title title--h3 title--color_blue title--border_left">
@@ -473,53 +479,54 @@
           </h2>
 
           <div class="portfolio__item mb-10 m-center">
-            <a href="http://www.trial-sport.ru/">
-              <span class="portfolio__elem">
-                <img
-                  class="portfolio__img"
-                  src="./img/portfolio/bicycle.jpeg"
-                  alt="portfolio site" />
-              </span>
-              <!--! TODO semantic h2 > h3 -->
-              <span class="portfolio__desc">
-                <span class="portfolio__title">Site about bicycle.</span>
+            <span class="portfolio__elem">
+              <img
+                class="portfolio__img"
+                src="./img/portfolio/bicycle.jpeg"
+                alt="portfolio site"
+              />
+            </span>
 
-                <span class="portfolio__date">since 2022.</span>
+            <div class="portfolio__desc">
+              <h4 class="title title--h4 title--color_blue center mt-0 mb-10">
+                Site about bicyles
+              </h4>
 
-                <span class="portfolio__text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Pariatur quaerat magni, a incidunt iusto nulla! Fuga odit
-                </span>
-              </span>
-            </a>
+              <p class="portfolio__date">since 2011</p>
+
+              <p class="paragraph paragraph--small center">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
           </div>
 
           <h2 class="title title--h3 title--color_blue title--border_left">
             <i
-              class="title__icon title__icon--big fa-solid fa-business-time"></i>
+              class="title__icon title__icon--big fa-solid fa-business-time"
+            ></i>
             Business site
           </h2>
 
           <div class="portfolio__item mb-10 m-center">
-            <a href="http://www.mountain.ru/">
-              <span class="portfolio__elem">
-                <img
-                  class="portfolio__img"
-                  src="./img/portfolio/mountains.jpeg"
-                  alt="portfolio site" />
-              </span>
+            <span class="portfolio__elem">
+              <img
+                class="portfolio__img"
+                src="./img/portfolio/mountains.jpeg"
+                alt="portfolio site"
+              />
+            </span>
 
-              <span class="portfolio__desc">
-                <span class="portfolio__title">About mountains.</span>
+            <div class="portfolio__desc">
+              <h4 class="title title--h4 title--color_blue center mt-0 mb-10">
+                Site about mountains
+              </h4>
 
-                <span class="portfolio__date">since 2022.</span>
+              <p class="portfolio__date">since 2015</p>
 
-                <span class="portfolio__text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Pariatur quaerat magni, a incidunt iusto nulla!
-                </span>
-              </span>
-            </a>
+              <p class="paragraph paragraph--small center">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
           </div>
 
           <h2 class="title title--h3 title--color_blue title--border_left">
@@ -528,24 +535,24 @@
           </h2>
 
           <div class="portfolio__item mb-10 m-center">
-            <a href="http://www.parrot.com/">
-              <span class="portfolio__elem">
-                <img
-                  class="portfolio__img"
-                  src="./img/portfolio/popugay.jpeg"
-                  alt="portfolio site" />
-              </span>
+            <span class="portfolio__elem">
+              <img
+                class="portfolio__img"
+                src="./img/portfolio/popugay.jpeg"
+                alt="portfolio site"
+              />
+            </span>
+            <div class="portfolio__desc">
+              <h4 class="title title--h4 title--color_blue center mt-0 mb-10">
+                Site about parrot
+              </h4>
 
-              <span class="portfolio__desc">
-                <span class="portfolio__title"> About parrot.</span>
+              <p class="portfolio__date">since 2011.</p>
 
-                <span class="portfolio__date">since 2020.</span>
-
-                <span class="portfolio__text">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                </span>
-              </span>
-            </a>
+              <p class="paragraph paragraph--small center">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
           </div>
         </div>
         <!-- Start Portfolio -->
@@ -565,7 +572,8 @@
             <img
               class="blog__img"
               src="./img/blogs/analitics.jpeg"
-              alt="analitics" />
+              alt="analitics"
+            />
 
             <div class="blog__date mt-10">
               <i class="fa fa-calendar-plus-o"></i>
@@ -589,7 +597,8 @@
             <img
               class="blog__img"
               src="./img/blogs/brands.jpeg"
-              alt="analitics" />
+              alt="analitics"
+            />
 
             <div class="blog__date mt-10">
               <i class="fa fa-calendar-plus-o"></i>
@@ -615,7 +624,8 @@
             <img
               class="blog__img"
               src="./img/blogs/working.jpeg"
-              alt="analitics" />
+              alt="analitics"
+            />
 
             <div class="blog__date mt-10">
               <i class="fa fa-calendar-plus-o"></i>
@@ -651,13 +661,15 @@
                 class="form__input"
                 type="text"
                 name="fname"
-                placeholder="First Name" />
+                placeholder="First Name"
+              />
 
               <input
                 class="form__input"
                 type="text"
                 name="lname"
-                placeholder="Last Name" />
+                placeholder="Last Name"
+              />
             </div>
 
             <div class="flex-container-sp">
@@ -665,7 +677,8 @@
                 class="form__input"
                 type="email"
                 name="email"
-                placeholder="Email" />
+                placeholder="Email"
+              />
 
               <input
                 class="form__input"
@@ -673,13 +686,15 @@
                 name="phone"
                 pattern="[+]{1}[0-9]{11,14}"
                 placeholder="Phone"
-                required />
+                required
+              />
             </div>
 
             <textarea
               class="form__textarea"
               name="subject"
-              placeholder="Message"></textarea>
+              placeholder="Message"
+            ></textarea>
             <div class="flex-container-sp">
               <label class="container">
                 subscribe to the newsletter

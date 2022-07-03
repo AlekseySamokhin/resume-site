@@ -9,7 +9,6 @@
 
 // font-size
 @font-size: 62.5%;
-@font-size--h1: 2.4rem;
 
 // font-family
 @font-family: "Roboto", sans-serif;
@@ -164,6 +163,10 @@ a {
     color: @main-color;
   }
 
+  &--color_white {
+    color: #fff;
+  }
+
   &__icon {
     &--big {
       font-size: 2;
@@ -199,6 +202,15 @@ a {
   &--h6 {
     font-size: 1rem;
   }
+
+  &--image {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    line-height: 30px;
+    transform: translateX(-50%) translateY(-50%);
+    background: rgba(35, 35, 141, 0.75);
+  }
 }
 
 .avatar {
@@ -208,12 +220,6 @@ a {
   width: 185px;
   border: 8px solid rgba(128, 128, 128, 0.15);
   border-radius: 50%;
-}
-
-.subtitle {
-  text-align: center;
-  font-weight: bold;
-  font-size: 2.5rem;
 }
 
 .paragraph {
@@ -319,29 +325,6 @@ a {
     &:hover {
       color: @hover-color;
     }
-  }
-}
-
-.home {
-  &__image {
-    display: block;
-    position: relative;
-    & img {
-      width: 100%;
-      border-radius: 5px;
-    }
-  }
-
-  &__title {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    color: #fff;
-    line-height: 30px;
-    font-size: 2rem;
-    text-align: center;
-    transform: translateX(-50%) translateY(-50%);
-    background: rgba(35, 35, 141, 0.75);
   }
 }
 
@@ -532,6 +515,14 @@ a {
   //    height: 10000px;
   //  }
   //}
+  &__image {
+    display: block;
+    position: relative;
+    & img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
 }
 
 .form {
@@ -648,8 +639,7 @@ a {
 .portfolio {
   &__item {
     position: relative;
-    width: 300px;
-    color: @main-color;
+    max-width: 300px;
     border-radius: 5px;
     background-color: #fff;
     overflow: hidden;
@@ -672,7 +662,6 @@ a {
   &__img {
     display: block;
     max-width: 100%;
-    margin: 0 auto;
   }
 
   &__elem {
